@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import "var";
+@import "mixin";
+
+body {
+  @include main-body;
+}
+
+.grid-container {
+  @include grid-layout;
+  
+& .grid-item{
+  @include grid-main-item;
+}
+
+& .grid-item1 {
+  background-color: $item1-bg;
+  text-align: $center;
+}
+
+& .grid-item2 {
+  background-color: $item2-bg;
+  text-align: $center;
+}
+
+& .grid-item3 {
+  background-color: $item3-bg;
+  text-align: $center;
+}
+
+& .grid-item4 {
+  background-color: $item4-bg;
+  text-align: $center;
+}
+
+& .grid-item5 {
+  background-color: $item5-bg;
+  text-align: $center;
+}
+
+& .grid-item6 {
+  background-color: $item6-bg;
+  text-align: $center;
+}
+
+& .grid-item h3 {
+  margin-top: 0;
+}
+
+& .grid-item h4{
+  @include grid-h4;
+}
+
+& .grid-item6 h4 {
+  font-size: 2.5rem;
+}
+
+}
+
+.live, .head {
+  @include live-head;
+}
+
+.head {
+  margin-bottom: $mb;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .grid-container{
+    display: block;
+    margin-left: 0;
+  }
+  .grid-item{
+    padding: 12px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .grid-container{
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  .grid-item{
+    margin-left: 17px;
+    padding: 20px;
+  }
+}
