@@ -11,6 +11,7 @@ body {
   
 & .grid-item{
   @include grid-main-item;
+  transition: 1s ease;
 }
 
 & .grid-item1 {
@@ -61,6 +62,11 @@ body {
   @include live-head;
 }
 
+.grid-item:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
 .head {
   margin-bottom: $mb;
 }
@@ -74,6 +80,7 @@ body {
   .grid-item{
     padding: 12px;
     margin-left: 0;
+    margin-right: 17px;
   }
 }
 
